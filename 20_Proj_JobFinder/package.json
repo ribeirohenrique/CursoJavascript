@@ -1,0 +1,18 @@
+{
+  "name": "Job_Finder",
+  "version": "1.0.0",
+  "description": "Ajudar programadores a encontrar um emprego",
+  "main": "app.js",
+  "author": "Henrique Mendes",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.1.0"
+  }
+}

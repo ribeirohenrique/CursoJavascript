@@ -1,17 +1,13 @@
-let {readFile, writeFile} = require("fs");
+const {createServer} = require("http");
 
-readFile("arquivo.txt", "utf8", function (error, texto){
-    if (error){
-        throw error;
-    } else {
-        console.log(texto);
-    }
+let server = createServer(function (require, response){
+    response.writeHead(200, {"Content-Type": "text/html"});
+    response.write(`
+        <h1>Hello World!</h1>
+        <p>Primeira página com Node.js</p>
+    `);
+    response.end();
 });
 
-writeFile("arquivo.txt", "Texto a ser escrito", function (error){
-    if (error){
-        throw error;
-    } else {
-        console.log("Escreveu com sucesso");
-    }
-})
+server.listen(8000);
+console.log("ouvindo na porta 8000");
